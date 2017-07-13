@@ -13,10 +13,11 @@
 		CC9A85E31F17033F00590B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E11F17033F00590B47 /* Main.storyboard */; };
 		CC9A85E51F17033F00590B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E41F17033F00590B47 /* Assets.xcassets */; };
 		CC9A85E81F17033F00590B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E61F17033F00590B47 /* LaunchScreen.storyboard */; };
-		CC9A85F11F17043400590B47 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85F01F17043400590B47 /* ModalViewController.m */; };
-		CC9A85FA1F170DD100590B47 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85F91F170DD100590B47 /* BouncePresentAnimation.m */; };
-		CC9A85FD1F171B3A00590B47 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85FC1F171B3A00590B47 /* SwipeUpInteractiveTransition.m */; };
-		CC9A86001F1724E900590B47 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85FF1F1724E900590B47 /* NormalDismissAnimation.m */; };
+		CC9A86021F175D4400590B47 /* zrx4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC9A86011F175D4400590B47 /* zrx4.jpg */; };
+		CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86051F175E9200590B47 /* BouncePresentAnimation.m */; };
+		CC9A860D1F175E9200590B47 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86071F175E9200590B47 /* ModalViewController.m */; };
+		CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */; };
+		CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +31,15 @@
 		CC9A85E41F17033F00590B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9A85E71F17033F00590B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9A85E91F17033F00590B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC9A85EF1F17043400590B47 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
-		CC9A85F01F17043400590B47 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
-		CC9A85F81F170DD100590B47 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
-		CC9A85F91F170DD100590B47 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
-		CC9A85FB1F171B3A00590B47 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
-		CC9A85FC1F171B3A00590B47 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
-		CC9A85FE1F1724E900590B47 /* NormalDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalDismissAnimation.h; sourceTree = "<group>"; };
-		CC9A85FF1F1724E900590B47 /* NormalDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalDismissAnimation.m; sourceTree = "<group>"; };
+		CC9A86011F175D4400590B47 /* zrx4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zrx4.jpg; sourceTree = "<group>"; };
+		CC9A86041F175E9200590B47 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
+		CC9A86051F175E9200590B47 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
+		CC9A86061F175E9200590B47 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		CC9A86071F175E9200590B47 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		CC9A86081F175E9200590B47 /* NormalDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalDismissAnimation.h; sourceTree = "<group>"; };
+		CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalDismissAnimation.m; sourceTree = "<group>"; };
+		CC9A860A1F175E9200590B47 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +72,11 @@
 		CC9A85D71F17033F00590B47 /* WXTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CC9A86031F175E9200590B47 /* BounceEffect */,
 				CC9A85DB1F17033F00590B47 /* AppDelegate.h */,
 				CC9A85DC1F17033F00590B47 /* AppDelegate.m */,
 				CC9A85DE1F17033F00590B47 /* ViewController.h */,
 				CC9A85DF1F17033F00590B47 /* ViewController.m */,
-				CC9A85EF1F17043400590B47 /* ModalViewController.h */,
-				CC9A85F01F17043400590B47 /* ModalViewController.m */,
-				CC9A85F81F170DD100590B47 /* BouncePresentAnimation.h */,
-				CC9A85F91F170DD100590B47 /* BouncePresentAnimation.m */,
-				CC9A85FB1F171B3A00590B47 /* SwipeUpInteractiveTransition.h */,
-				CC9A85FC1F171B3A00590B47 /* SwipeUpInteractiveTransition.m */,
-				CC9A85FE1F1724E900590B47 /* NormalDismissAnimation.h */,
-				CC9A85FF1F1724E900590B47 /* NormalDismissAnimation.m */,
 				CC9A85E11F17033F00590B47 /* Main.storyboard */,
 				CC9A85E41F17033F00590B47 /* Assets.xcassets */,
 				CC9A85E61F17033F00590B47 /* LaunchScreen.storyboard */,
@@ -94,9 +89,25 @@
 		CC9A85D81F17033F00590B47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC9A86011F175D4400590B47 /* zrx4.jpg */,
 				CC9A85D91F17033F00590B47 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC9A86031F175E9200590B47 /* BounceEffect */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A86041F175E9200590B47 /* BouncePresentAnimation.h */,
+				CC9A86051F175E9200590B47 /* BouncePresentAnimation.m */,
+				CC9A86061F175E9200590B47 /* ModalViewController.h */,
+				CC9A86071F175E9200590B47 /* ModalViewController.m */,
+				CC9A86081F175E9200590B47 /* NormalDismissAnimation.h */,
+				CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */,
+				CC9A860A1F175E9200590B47 /* SwipeUpInteractiveTransition.h */,
+				CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */,
+			);
+			path = BounceEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				CC9A85E81F17033F00590B47 /* LaunchScreen.storyboard in Resources */,
 				CC9A85E51F17033F00590B47 /* Assets.xcassets in Resources */,
 				CC9A85E31F17033F00590B47 /* Main.storyboard in Resources */,
+				CC9A86021F175D4400590B47 /* zrx4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,13 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9A85FA1F170DD100590B47 /* BouncePresentAnimation.m in Sources */,
-				CC9A85F11F17043400590B47 /* ModalViewController.m in Sources */,
-				CC9A86001F1724E900590B47 /* NormalDismissAnimation.m in Sources */,
+				CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */,
+				CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */,
 				CC9A85E01F17033F00590B47 /* ViewController.m in Sources */,
+				CC9A860D1F175E9200590B47 /* ModalViewController.m in Sources */,
+				CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */,
 				CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */,
 				CC9A85DA1F17033F00590B47 /* main.m in Sources */,
-				CC9A85FD1F171B3A00590B47 /* SwipeUpInteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
