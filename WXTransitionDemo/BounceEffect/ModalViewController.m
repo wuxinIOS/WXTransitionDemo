@@ -10,15 +10,19 @@
 #import "BouncePresentAnimation.h"
 #import "SwipeUpInteractiveTransition.h"
 #import "NormalDismissAnimation.h"
+#import "WXPercentInteractiveTransition.h"
 
 @interface ModalViewController ()
 @property(nonatomic,strong) BouncePresentAnimation *presentAnimation;
 @property(nonatomic, strong) SwipeUpInteractiveTransition *transitionController;
 @property (nonatomic, strong) NormalDismissAnimation *dismissAnimation;
+@property(nonatomic, strong)WXPercentInteractiveTransition *interactiveTransition;
+
 @end
 
 
 @implementation ModalViewController
+
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     
@@ -28,7 +32,7 @@
         _presentAnimation = [BouncePresentAnimation new];
         _dismissAnimation = [NormalDismissAnimation new];
         _transitionController = [SwipeUpInteractiveTransition new];
-        
+        _interactiveTransition = [WXPercentInteractiveTransition percentInteractiveTransitionForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionDown withTransitionType:WXPercentInteractiveTransitionTypeDismiss];
     }
     return self;
 }
@@ -46,9 +50,9 @@
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    [self.transitionController wireToViewController:self];
     
 
+     
 
 }
 
@@ -86,7 +90,7 @@
 }
 
 -(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
-    return self.transitionController.interacting ? self.transitionController : nil;
+    return self.interactiveTransition.transitioning ? self.interactiveTransition : nil;
 }
 
 

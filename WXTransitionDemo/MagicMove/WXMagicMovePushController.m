@@ -8,12 +8,20 @@
 
 #import "WXMagicMovePushController.h"
 #import "WXMagicTransiton.h"
+#import "WXPercentInteractiveTransition.h"
 
 @interface WXMagicMovePushController ()
-
+@property(nonatomic, strong)WXPercentInteractiveTransition *interactiveTransition;
 @end
 
 @implementation WXMagicMovePushController
+
+- (WXPercentInteractiveTransition *)interactiveTransition{
+    if (!_interactiveTransition) {
+        _interactiveTransition = [[WXPercentInteractiveTransition alloc]initForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionRight withTransitionType:WXPercentInteractiveTransitionTypePop];
+    }
+    return _interactiveTransition;
+}
 
 - (void)dealloc {
     NSLog(@"释放了");
@@ -48,8 +56,9 @@
 
 //手势动画效果
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-    return nil;
+    return self.interactiveTransition.transitioning ? self.interactiveTransition:nil;
 }
+
 
 
 

@@ -11,7 +11,7 @@
 
 @interface SwipeUpInteractiveTransition ()
 @property (nonatomic, assign) BOOL shouldComplete;
-@property (nonatomic, strong) UIViewController *presentingVC;
+@property (nonatomic, weak) UIViewController *presentingVC;
 @end
 
 @implementation SwipeUpInteractiveTransition
