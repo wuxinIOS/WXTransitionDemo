@@ -34,7 +34,6 @@
 
 - (void)handleGesture:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view.superview];
-    NSLog(@"x:%f---y:%f",translation.x,translation.y);
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan:
             // 1. Mark the interacting flag. Used when supplying it in delegate.

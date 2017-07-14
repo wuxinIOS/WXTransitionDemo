@@ -8,18 +8,22 @@
 
 #import "ViewController.h"
 #import "ModalViewController.h"
-#import "BouncePresentAnimation.h"
-#import "SwipeUpInteractiveTransition.h"
-#import "NormalDismissAnimation.h"
+
+#import "FTT_Roundview.h"
 
 
-@interface ViewController ()<ModalViewControllerDelegate,UIViewControllerTransitioningDelegate>
-@property(nonatomic,strong) BouncePresentAnimation *presentAnimation;
-@property(nonatomic, strong) SwipeUpInteractiveTransition *transitionController;
-@property (nonatomic, strong) NormalDismissAnimation *dismissAnimation;
+@interface ViewController ()<ModalViewControllerDelegate>
+
 
 @property(nonatomic, strong) UIButton *followMeBtn;
 
+@property(nonatomic, strong) UIButton *clickButton;
+
+@property(nonatomic, strong) FTT_Roundview *romateView;
+
+@property(nonatomic, strong) NSMutableArray *titleArray;
+
+@property(nonatomic, strong) NSMutableArray *imgArray;
 
 @property(nonatomic, assign) CGPoint lastPoint;
 
@@ -27,12 +31,29 @@
 
 @implementation ViewController
 
+#pragma mark -- 懒加载
+
+- (UIButton *)clickButton{
+    if (!_clickButton) {
+        _clickButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _clickButton.backgroundColor = [UIColor redColor];
+        _clickButton.frame = CGRectMake(0, 0, 100, 100);
+        _clickButton.center = self.view.center;
+        _clickButton.layer.cornerRadius = _clickButton.frame.size.width * 0.5;
+        _clickButton.layer.masksToBounds = YES;
+        [_clickButton setTitle:@"点我" forState:UIControlStateNormal];
+        [_clickButton addTarget:self action:@selector(clickBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    }
+    return _clickButton;
+}
+
 - (UIButton *)followMeBtn {
     if (!_followMeBtn) {
         _followMeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        _followMeBtn.backgroundColor = [UIColor redColor];
-        _followMeBtn.frame = CGRectMake(0, 0, 200, 200);
-        _followMeBtn.center = self.view.center;
+        _followMeBtn.backgroundColor = [UIColor orangeColor];
+        _followMeBtn.frame = CGRectMake(0, 0, 50, 50);
+        _followMeBtn.center = CGPointMake(100, 100);
         _followMeBtn.layer.cornerRadius = _followMeBtn.frame.size.width * 0.5;
         _lastPoint = _followMeBtn.center;
         _followMeBtn.layer.masksToBounds = YES;
@@ -41,15 +62,40 @@
     }
     return _followMeBtn;
 }
+- (FTT_Roundview *)romateView {
+    if (!_romateView) {
+        
+        _romateView = [[FTT_Roundview alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width)];
+        _romateView.center = self.view.center;
+        _romateView.BtnBackgroudColor = [UIColor whiteColor];
+    }
+    return _romateView;
+}
+
+- (NSMutableArray *)titleArray{
+    if (!_titleArray) {
+        _titleArray = [@[@"神奇",@"抖动",@"扩散",@"翻页",@"弹性(bounce)"] mutableCopy];
+    }
+    return _titleArray;
+}
+
+- (NSMutableArray *)imgArray{
+    if (!_imgArray) {
+        _imgArray = [@[@"btn_increase",@"business_center_2",@"home_2",@"message_2",@"task_management_2"] mutableCopy];
+    }
+    
+    return _imgArray;
+}
+
+
+#pragma mark -- 系统方法
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _presentAnimation = [BouncePresentAnimation new];
-        _dismissAnimation = [NormalDismissAnimation new];
-        _transitionController = [SwipeUpInteractiveTransition new];
+       
 
     }
     return self;
@@ -61,23 +107,79 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //UIWindow *window = [UIApplication sharedApplication].windows.lastObject;
-    //[self.view addSubview:self.followMeBtn];
-    //[self.view bringSubviewToFront:self.followMeBtn];
+    [self setupUI];
+    
+    __weak ViewController *weakself = self;
+    self.romateView.back  = ^(NSInteger num ,NSString *name ) {
+        [weakself romateViewItemDicClick:num title:name];
+    };
+    
+    
+
+
+
+}
+
+#pragma mark -- 初始化
+
+- (void)setupUI{
+    
+    [self setupRomateView];
+    [self setupClickBtn];
+    [self setupFollowBtn];
+
+}
+
+- (void)setupRomateView{
+   
+    [self.view addSubview:self.romateView];
+
+    [self.romateView BtnType:FTT_RoundviewTypeCustom BtnWitch:100 adjustsFontSizesTowidth:YES msaksToBounds:YES conrenrRadius:50 image:self.imgArray TitileArray:self.titleArray titileColor:[UIColor blackColor]];
+
+
+
+}
+
+- (void)setupFollowBtn{
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
     [self.followMeBtn addGestureRecognizer:pan];
-    
-
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    [button setTitle:@"Click me" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-
     [self.view insertSubview:self.followMeBtn atIndex:[self.view subviews].count];
 
 }
+
+
+- (void)setupClickBtn{
+    [self.view addSubview:self.clickButton];
+
+
+}
+
+
+#pragma mark -- 手势处理
+- (void)clickBtnAction:(UIButton *)sender {
+    [self.romateView show];
+    
+}
+
+- (void)romateViewItemDicClick:(NSInteger)num title:(NSString *)title{
+    
+    
+    if ([title  isEqual: @"弹性(bounce)"]) {
+        [self bounceBtnClicked:nil];
+    }
+    
+}
+
+-(void) bounceBtnClicked:(id)sender
+{
+    ModalViewController *mvc =  [[ModalViewController alloc] init];
+    mvc.transitioningDelegate = mvc;//设置将要呈现的控制器的动画的代理
+    mvc.delegate = self;
+    [self presentViewController:mvc animated:YES completion:nil];
+}
+
+
 
 - (void)handlePan:(UIPanGestureRecognizer *)pan {
     
@@ -92,9 +194,7 @@
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:
         {
-            //CGPoint point = [pan locationInView:self.view];
-            //startX = point.x;
-            //startY = point.y;
+            
             break;
         }
             
@@ -122,10 +222,6 @@
     CGFloat x = startX + changedX;
     CGFloat y = startY + changedY;
     
-   
-    
-    
-
     if (x + self.followMeBtn.bounds.size.width * 0.5  >= self.view.bounds.size.width  ) {
         
         x = self.view.bounds.size.width - self.followMeBtn.bounds.size.width * 0.5;
@@ -150,45 +246,13 @@
     
 }
 
--(void) buttonClicked:(id)sender
-{
-    ModalViewController *mvc =  [[ModalViewController alloc] init];
-    mvc.transitioningDelegate = self;//设置将要呈现的控制器的动画的代理
-    mvc.delegate = self;
-    [self.transitionController wireToViewController:mvc];
-    [self presentViewController:mvc animated:YES completion:nil];
-}
 
-//MARK:--ModalViewController协议
+#pragma mark--ModalViewController协议
 - (void)modalViewControllerDidClickDismissButton:(ModalViewController *)modalViewController{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//MARK:--UIViewControllerTransitioningDelegate协议
-/*作用
- */
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-//presented:将要被modal出的控制器
-//presenting:正在modal的控制器
-//source:来源控制器
-    return self.presentAnimation;//返回的是遵守了UIViewControllerAnimatedTransitioning的对象，在这个对象中设置需要的动画效果
-    
-}
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    //dismissed:将要被dismiss的控制器
-    return self.dismissAnimation;
-}
-
--(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
-    return self.transitionController.interacting ? self.transitionController : nil;
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

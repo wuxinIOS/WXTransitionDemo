@@ -15,7 +15,7 @@
 @end
 
 
-@interface ModalViewController : UIViewController
+@interface ModalViewController : UIViewController<UIViewControllerTransitioningDelegate>
 
 @property (weak,nonatomic) id<ModalViewControllerDelegate> delegate;
 

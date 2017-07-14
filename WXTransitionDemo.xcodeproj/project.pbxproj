@@ -18,6 +18,8 @@
 		CC9A860D1F175E9200590B47 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86071F175E9200590B47 /* ModalViewController.m */; };
 		CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */; };
 		CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */; };
+		CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */; };
+		CCDCEEAB1F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalDismissAnimation.m; sourceTree = "<group>"; };
 		CC9A860A1F175E9200590B47 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
 		CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
+		CCDCEEA61F1849AB005E255E /* FTT_Roundview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTT_Roundview.h; sourceTree = "<group>"; };
+		CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTT_Roundview.m; sourceTree = "<group>"; };
+		CCDCEEA81F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTOneFingerRotationGestureRecognizer.h; sourceTree = "<group>"; };
+		CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTOneFingerRotationGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				CC9A85E41F17033F00590B47 /* Assets.xcassets */,
 				CC9A85E61F17033F00590B47 /* LaunchScreen.storyboard */,
 				CC9A85E91F17033F00590B47 /* Info.plist */,
+				CCDCEEA51F1849AB005E255E /* FTT_RoundView */,
 				CC9A85D81F17033F00590B47 /* Supporting Files */,
 			);
 			path = WXTransitionDemo;
@@ -108,6 +115,17 @@
 				CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */,
 			);
 			path = BounceEffect;
+			sourceTree = "<group>";
+		};
+		CCDCEEA51F1849AB005E255E /* FTT_RoundView */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCEEA61F1849AB005E255E /* FTT_Roundview.h */,
+				CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */,
+				CCDCEEA81F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.h */,
+				CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */,
+			);
+			path = FTT_RoundView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +203,13 @@
 			files = (
 				CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */,
 				CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */,
+				CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */,
 				CC9A85E01F17033F00590B47 /* ViewController.m in Sources */,
 				CC9A860D1F175E9200590B47 /* ModalViewController.m in Sources */,
 				CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */,
 				CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */,
 				CC9A85DA1F17033F00590B47 /* main.m in Sources */,
+				CCDCEEAB1F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +366,7 @@
 				CC9A85EE1F17033F00590B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
