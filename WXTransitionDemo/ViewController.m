@@ -27,6 +27,10 @@
 
 @property(nonatomic, assign) CGPoint lastPoint;
 
+@property(nonatomic,strong) NSTimer *timer;
+
+@property(nonatomic, assign) CGFloat angle;
+
 @end
 
 @implementation ViewController
@@ -41,7 +45,7 @@
         _clickButton.center = self.view.center;
         _clickButton.layer.cornerRadius = _clickButton.frame.size.width * 0.5;
         _clickButton.layer.masksToBounds = YES;
-        [_clickButton setTitle:@"点我" forState:UIControlStateNormal];
+        [_clickButton setTitle:@"隐藏" forState:UIControlStateNormal];
         [_clickButton addTarget:self action:@selector(clickBtnAction:) forControlEvents:UIControlEventTouchUpInside];
 
     }
@@ -51,13 +55,18 @@
 - (UIButton *)followMeBtn {
     if (!_followMeBtn) {
         _followMeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        _followMeBtn.backgroundColor = [UIColor orangeColor];
-        _followMeBtn.frame = CGRectMake(0, 0, 50, 50);
+        _followMeBtn.backgroundColor = [UIColor clearColor];
+        _followMeBtn.frame = CGRectMake(0, 0, 100, 100);
         _followMeBtn.center = CGPointMake(100, 100);
         _followMeBtn.layer.cornerRadius = _followMeBtn.frame.size.width * 0.5;
         _lastPoint = _followMeBtn.center;
-        _followMeBtn.layer.masksToBounds = YES;
-        [_followMeBtn setTitle:@"移动" forState:UIControlStateNormal];
+        //_followMeBtn.layer.masksToBounds = YES;
+        [_followMeBtn setTitle:@"·" forState:UIControlStateNormal];
+        _followMeBtn.titleLabel.font = [UIFont systemFontOfSize:50];
+        [_followMeBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        _followMeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        _followMeBtn.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
+        
         
     }
     return _followMeBtn;
@@ -109,6 +118,8 @@
     
     [self setupUI];
     
+    self.angle = M_PI * 0.0;
+    
     __weak ViewController *weakself = self;
     self.romateView.back  = ^(NSInteger num ,NSString *name ) {
         [weakself romateViewItemDicClick:num title:name];
@@ -127,6 +138,7 @@
     [self setupRomateView];
     [self setupClickBtn];
     [self setupFollowBtn];
+    [self setupTimer];
 
 }
 
@@ -146,6 +158,34 @@
     [self.followMeBtn addGestureRecognizer:pan];
     [self.view insertSubview:self.followMeBtn atIndex:[self.view subviews].count];
 
+    [self addRound];
+}
+
+- (void)addRound{
+    
+    int roundCount = 5;
+    CGFloat angle = - M_PI * 2 / roundCount;
+    CGFloat radius = self.followMeBtn.bounds.size.width * 0.5;
+    CGFloat x = self.followMeBtn.bounds.size.width * 0.5;
+    CGFloat y = self.followMeBtn.bounds.size.height * 0.5;
+    
+    for (int i = 0; i<roundCount; i++) {
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.backgroundColor = [UIColor orangeColor];
+        button.frame = CGRectMake(0, 0, 50, 50);
+        button.layer.cornerRadius = button.bounds.size.width * 0.5;
+        button.layer.masksToBounds = YES;
+        
+        CGFloat num = (i + 3 - 0.1) * 1.0;
+        CGPoint center = CGPointMake(x + radius * cos(num *angle ), y + radius*sin(num *angle));
+        button.center = center;
+
+        [self.followMeBtn addSubview:button];
+        
+        
+    }
+    
 }
 
 
@@ -156,9 +196,23 @@
 }
 
 
+- (void)setupTimer{
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(automaticRotation) userInfo:nil repeats:YES];
+    
+}
+
+
+
+
 #pragma mark -- 手势处理
 - (void)clickBtnAction:(UIButton *)sender {
     [self.romateView show];
+    if ([sender.titleLabel.text isEqualToString:@"隐藏"]) {
+        [sender setTitle:@"显示" forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"隐藏" forState:UIControlStateNormal];
+    }
     
 }
 
@@ -246,6 +300,17 @@
     
 }
 
+- (void)automaticRotation{
+    self.angle += 0.01;
+    
+    if (self.angle > 6.28) {
+        self.angle = 0;
+    }
+    
+    
+    self.followMeBtn.transform = CGAffineTransformMakeRotation(self.angle);
+    
+}
 
 #pragma mark--ModalViewController协议
 - (void)modalViewControllerDidClickDismissButton:(ModalViewController *)modalViewController{
