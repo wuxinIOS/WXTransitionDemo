@@ -24,6 +24,7 @@
 		CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */; };
 		CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */; };
 		CCDCEEB81F18A74E005E255E /* 5355d3ccc22dd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */; };
+		CCDCEEBC1F18AADA005E255E /* WXPercentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		CCDCEEB41F1870B1005E255E /* WXMagicTransiton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMagicTransiton.h; sourceTree = "<group>"; };
 		CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMagicTransiton.m; sourceTree = "<group>"; };
 		CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5355d3ccc22dd.jpg; sourceTree = "<group>"; };
+		CCDCEEBA1F18AADA005E255E /* WXPercentInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPercentInteractiveTransition.h; sourceTree = "<group>"; };
+		CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPercentInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 		CC9A85D71F17033F00590B47 /* WXTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCEEB91F18AA87005E255E /* WXInteractiveTransition(手势过渡动画) */,
 				CCDCEEAD1F1868EE005E255E /* MagicMove */,
 				CC9A86031F175E9200590B47 /* BounceEffect */,
 				CC9A85DB1F17033F00590B47 /* AppDelegate.h */,
@@ -152,6 +156,16 @@
 				CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */,
 			);
 			path = MagicMove;
+			sourceTree = "<group>";
+		};
+		CCDCEEB91F18AA87005E255E /* WXInteractiveTransition(手势过渡动画) */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCEEBA1F18AADA005E255E /* WXPercentInteractiveTransition.h */,
+				CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */,
+			);
+			name = "WXInteractiveTransition(手势过渡动画)";
+			path = WXInteractiveTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,7 @@
 				CCDCEEB01F18692C005E255E /* WXMagicMoveController.m in Sources */,
 				CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */,
 				CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */,
+				CCDCEEBC1F18AADA005E255E /* WXPercentInteractiveTransition.m in Sources */,
 				CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */,
 				CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */,
 				CC9A85E01F17033F00590B47 /* ViewController.m in Sources */,
