@@ -20,6 +20,10 @@
 		CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */; };
 		CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */; };
 		CCDCEEAB1F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */; };
+		CCDCEEB01F18692C005E255E /* WXMagicMoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEAF1F18692C005E255E /* WXMagicMoveController.m */; };
+		CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */; };
+		CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */; };
+		CCDCEEB81F18A74E005E255E /* 5355d3ccc22dd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,13 @@
 		CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTT_Roundview.m; sourceTree = "<group>"; };
 		CCDCEEA81F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTOneFingerRotationGestureRecognizer.h; sourceTree = "<group>"; };
 		CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTOneFingerRotationGestureRecognizer.m; sourceTree = "<group>"; };
+		CCDCEEAE1F18692C005E255E /* WXMagicMoveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMagicMoveController.h; sourceTree = "<group>"; };
+		CCDCEEAF1F18692C005E255E /* WXMagicMoveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMagicMoveController.m; sourceTree = "<group>"; };
+		CCDCEEB11F186F8C005E255E /* WXMagicMovePushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMagicMovePushController.h; sourceTree = "<group>"; };
+		CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMagicMovePushController.m; sourceTree = "<group>"; };
+		CCDCEEB41F1870B1005E255E /* WXMagicTransiton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMagicTransiton.h; sourceTree = "<group>"; };
+		CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMagicTransiton.m; sourceTree = "<group>"; };
+		CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5355d3ccc22dd.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,7 @@
 		CC9A85D71F17033F00590B47 /* WXTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCEEAD1F1868EE005E255E /* MagicMove */,
 				CC9A86031F175E9200590B47 /* BounceEffect */,
 				CC9A85DB1F17033F00590B47 /* AppDelegate.h */,
 				CC9A85DC1F17033F00590B47 /* AppDelegate.m */,
@@ -96,6 +108,7 @@
 		CC9A85D81F17033F00590B47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */,
 				CC9A86011F175D4400590B47 /* zrx4.jpg */,
 				CC9A85D91F17033F00590B47 /* main.m */,
 			);
@@ -126,6 +139,19 @@
 				CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */,
 			);
 			path = FTT_RoundView;
+			sourceTree = "<group>";
+		};
+		CCDCEEAD1F1868EE005E255E /* MagicMove */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCEEAE1F18692C005E255E /* WXMagicMoveController.h */,
+				CCDCEEAF1F18692C005E255E /* WXMagicMoveController.m */,
+				CCDCEEB11F186F8C005E255E /* WXMagicMovePushController.h */,
+				CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */,
+				CCDCEEB41F1870B1005E255E /* WXMagicTransiton.h */,
+				CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */,
+			);
+			path = MagicMove;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9A85E81F17033F00590B47 /* LaunchScreen.storyboard in Resources */,
+				CCDCEEB81F18A74E005E255E /* 5355d3ccc22dd.jpg in Resources */,
 				CC9A85E51F17033F00590B47 /* Assets.xcassets in Resources */,
 				CC9A85E31F17033F00590B47 /* Main.storyboard in Resources */,
 				CC9A86021F175D4400590B47 /* zrx4.jpg in Resources */,
@@ -202,6 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */,
+				CCDCEEB01F18692C005E255E /* WXMagicMoveController.m in Sources */,
+				CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */,
+				CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */,
 				CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */,
 				CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */,
 				CC9A85E01F17033F00590B47 /* ViewController.m in Sources */,

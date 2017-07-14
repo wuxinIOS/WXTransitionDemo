@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ModalViewController.h"
+#import "WXMagicMoveController.h"
 
 #import "FTT_Roundview.h"
 
@@ -56,7 +57,7 @@
     if (!_followMeBtn) {
         _followMeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _followMeBtn.backgroundColor = [UIColor clearColor];
-        _followMeBtn.frame = CGRectMake(0, 0, 100, 100);
+        _followMeBtn.frame = CGRectMake(0, 0, 150, 150);
         _followMeBtn.center = CGPointMake(100, 100);
         _followMeBtn.layer.cornerRadius = _followMeBtn.frame.size.width * 0.5;
         _lastPoint = _followMeBtn.center;
@@ -83,7 +84,7 @@
 
 - (NSMutableArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = [@[@"神奇",@"抖动",@"扩散",@"翻页",@"弹性(bounce)"] mutableCopy];
+        _titleArray = [@[@"神奇移动",@"抖动",@"扩散",@"翻页",@"弹性(bounce)"] mutableCopy];
     }
     return _titleArray;
 }
@@ -221,6 +222,12 @@
     
     if ([title  isEqual: @"弹性(bounce)"]) {
         [self bounceBtnClicked:nil];
+    } else if ([title isEqualToString:@"神奇移动"]) {
+        WXMagicMoveController *magicMoveVC = [[WXMagicMoveController alloc]init];
+        UINavigationController *navc = [[UINavigationController alloc]initWithRootViewController:magicMoveVC];
+        magicMoveVC.title = @"神奇移动";
+        [self presentViewController:navc animated:YES completion:nil];
+        
     }
     
 }
