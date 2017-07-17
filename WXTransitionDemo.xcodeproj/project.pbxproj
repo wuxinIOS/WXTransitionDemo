@@ -31,6 +31,7 @@
 		CC638B111F1C55C100EC0131 /* WXTransitonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */; };
 		CC638B141F1C5B2F00EC0131 /* WXSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */; };
 		CC638B171F1C8F2600EC0131 /* WX_CABasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */; };
+		CC638B1A1F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B191F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m */; };
 		CC9A85DA1F17033F00590B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85D91F17033F00590B47 /* main.m */; };
 		CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DC1F17033F00590B47 /* AppDelegate.m */; };
 		CC9A85E01F17033F00590B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DF1F17033F00590B47 /* ViewController.m */; };
@@ -66,6 +67,8 @@
 		CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSpringAnimation.m; sourceTree = "<group>"; };
 		CC638B151F1C8F2600EC0131 /* WX_CABasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WX_CABasicAnimation.h; sourceTree = "<group>"; };
 		CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WX_CABasicAnimation.m; sourceTree = "<group>"; };
+		CC638B181F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WX_CAKeyFrameAnimation.h; sourceTree = "<group>"; };
+		CC638B191F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WX_CAKeyFrameAnimation.m; sourceTree = "<group>"; };
 		CC9A85D51F17033F00590B47 /* WXTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A85D91F17033F00590B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9A85DB1F17033F00590B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */,
 				CC638B151F1C8F2600EC0131 /* WX_CABasicAnimation.h */,
 				CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */,
+				CC638B181F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.h */,
+				CC638B191F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m */,
 			);
 			path = WXBasicAnimation;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				CC638AEB1F1C472A00EC0131 /* WXMagicTransiton.m in Sources */,
 				CC638AEC1F1C472A00EC0131 /* WXPercentInteractiveTransition.m in Sources */,
 				CC638AED1F1C472A00EC0131 /* BouncePresentAnimation.m in Sources */,
+				CC638B1A1F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m in Sources */,
 				CC638B071F1C48BB00EC0131 /* ViewController.m in Sources */,
 				CC638B0A1F1C4C5E00EC0131 /* WXLogInAnimationController.m in Sources */,
 				CC638AEE1F1C472A00EC0131 /* FTT_Roundview.m in Sources */,

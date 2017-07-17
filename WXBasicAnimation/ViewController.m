@@ -19,14 +19,14 @@
 
 - (NSArray *)vcName {
     if (!_vcName) {
-        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation"];
+        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation",@"WX_CAKeyFrameAnimation"];
     }
     return  _vcName;
 }
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画"].mutableCopy;
+        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画",@"WX_CAKeyFrameAnimation帧动画"].mutableCopy;
         
     }
     return _dataArray;
@@ -74,6 +74,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
 
     return cell;
     
