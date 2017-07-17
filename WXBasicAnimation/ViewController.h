@@ -6,8 +6,8 @@
 //  Copyright © 2017年 BlackEr Gray. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ViewController : ViewController
+@interface ViewController : UIViewController
 
 @end
