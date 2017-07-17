@@ -90,6 +90,7 @@
                         [self finishInteractiveTransition];
                     } else {
                         [self cancelInteractiveTransition];
+                        
                     }
 
                     break;
@@ -99,6 +100,7 @@
                         [self finishInteractiveTransition];
                     } else {
                         [self cancelInteractiveTransition];
+
                     }
                     break;
             }

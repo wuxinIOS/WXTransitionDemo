@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC638AE81F1C472A00EC0131 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */; };
+		CC638AE91F1C472A00EC0131 /* WXMagicMoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEAF1F18692C005E255E /* WXMagicMoveController.m */; };
+		CC638AEA1F1C472A00EC0131 /* WXMagicMovePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */; };
+		CC638AEB1F1C472A00EC0131 /* WXMagicTransiton.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */; };
+		CC638AEC1F1C472A00EC0131 /* WXPercentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */; };
+		CC638AED1F1C472A00EC0131 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86051F175E9200590B47 /* BouncePresentAnimation.m */; };
+		CC638AEE1F1C472A00EC0131 /* FTT_Roundview.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA71F1849AB005E255E /* FTT_Roundview.m */; };
+		CC638AF01F1C472A00EC0131 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86071F175E9200590B47 /* ModalViewController.m */; };
+		CC638AF11F1C472A00EC0131 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A860B1F175E9200590B47 /* SwipeUpInteractiveTransition.m */; };
+		CC638AF21F1C472A00EC0131 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DC1F17033F00590B47 /* AppDelegate.m */; };
+		CC638AF31F1C472A00EC0131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85D91F17033F00590B47 /* main.m */; };
+		CC638AF41F1C472A00EC0131 /* KTOneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEA91F1849AB005E255E /* KTOneFingerRotationGestureRecognizer.m */; };
+		CC638AF71F1C472A00EC0131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E61F17033F00590B47 /* LaunchScreen.storyboard */; };
+		CC638AF81F1C472A00EC0131 /* 5355d3ccc22dd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */; };
+		CC638AF91F1C472A00EC0131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E41F17033F00590B47 /* Assets.xcassets */; };
+		CC638AFA1F1C472A00EC0131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E11F17033F00590B47 /* Main.storyboard */; };
+		CC638AFB1F1C472A00EC0131 /* zrx4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC9A86011F175D4400590B47 /* zrx4.jpg */; };
+		CC638B041F1C480600EC0131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B031F1C480600EC0131 /* ViewController.m */; };
 		CC9A85DA1F17033F00590B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85D91F17033F00590B47 /* main.m */; };
 		CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DC1F17033F00590B47 /* AppDelegate.m */; };
 		CC9A85E01F17033F00590B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DF1F17033F00590B47 /* ViewController.m */; };
@@ -28,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC638AFF1F1C472A00EC0131 /* WXBasicAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXBasicAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC638B001F1C472A00EC0131 /* WXBasicAnimationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = WXBasicAnimationInfo.plist; path = "/Users/blackergray/Desktop/WXCode/GitHub项目/WXTransitionDemo/WXBasicAnimationInfo.plist"; sourceTree = "<absolute>"; };
+		CC638B021F1C480600EC0131 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC638B031F1C480600EC0131 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC9A85D51F17033F00590B47 /* WXTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A85D91F17033F00590B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9A85DB1F17033F00590B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +85,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC638AF51F1C472A00EC0131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9A85D21F17033F00590B47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,11 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC638B011F1C47CC00EC0131 /* WXBasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				CC638B001F1C472A00EC0131 /* WXBasicAnimationInfo.plist */,
+				CC638B021F1C480600EC0131 /* ViewController.h */,
+				CC638B031F1C480600EC0131 /* ViewController.m */,
+			);
+			path = WXBasicAnimation;
+			sourceTree = "<group>";
+		};
 		CC9A85CC1F17033F00590B47 = {
 			isa = PBXGroup;
 			children = (
 				CC9A85D71F17033F00590B47 /* WXTransitionDemo */,
 				CC9A85D61F17033F00590B47 /* Products */,
+				CC638B011F1C47CC00EC0131 /* WXBasicAnimation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CC9A85D51F17033F00590B47 /* WXTransitionDemo.app */,
+				CC638AFF1F1C472A00EC0131 /* WXBasicAnimation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +212,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC638AE61F1C472A00EC0131 /* WXBasicAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC638AFC1F1C472A00EC0131 /* Build configuration list for PBXNativeTarget "WXBasicAnimation" */;
+			buildPhases = (
+				CC638AE71F1C472A00EC0131 /* Sources */,
+				CC638AF51F1C472A00EC0131 /* Frameworks */,
+				CC638AF61F1C472A00EC0131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WXBasicAnimation;
+			productName = WXTransitionDemo;
+			productReference = CC638AFF1F1C472A00EC0131 /* WXBasicAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CC9A85D41F17033F00590B47 /* WXTransitionDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC9A85EC1F17033F00590B47 /* Build configuration list for PBXNativeTarget "WXTransitionDemo" */;
@@ -197,6 +255,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "BlackEr Gray";
 				TargetAttributes = {
+					CC638AE61F1C472A00EC0131 = {
+						DevelopmentTeam = 38L5433X9B;
+					};
 					CC9A85D41F17033F00590B47 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 38L5433X9B;
@@ -218,11 +279,24 @@
 			projectRoot = "";
 			targets = (
 				CC9A85D41F17033F00590B47 /* WXTransitionDemo */,
+				CC638AE61F1C472A00EC0131 /* WXBasicAnimation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC638AF61F1C472A00EC0131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC638AF71F1C472A00EC0131 /* LaunchScreen.storyboard in Resources */,
+				CC638AF81F1C472A00EC0131 /* 5355d3ccc22dd.jpg in Resources */,
+				CC638AF91F1C472A00EC0131 /* Assets.xcassets in Resources */,
+				CC638AFA1F1C472A00EC0131 /* Main.storyboard in Resources */,
+				CC638AFB1F1C472A00EC0131 /* zrx4.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9A85D31F17033F00590B47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +312,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC638AE71F1C472A00EC0131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC638AE81F1C472A00EC0131 /* NormalDismissAnimation.m in Sources */,
+				CC638AE91F1C472A00EC0131 /* WXMagicMoveController.m in Sources */,
+				CC638AEA1F1C472A00EC0131 /* WXMagicMovePushController.m in Sources */,
+				CC638AEB1F1C472A00EC0131 /* WXMagicTransiton.m in Sources */,
+				CC638AEC1F1C472A00EC0131 /* WXPercentInteractiveTransition.m in Sources */,
+				CC638AED1F1C472A00EC0131 /* BouncePresentAnimation.m in Sources */,
+				CC638B041F1C480600EC0131 /* ViewController.m in Sources */,
+				CC638AEE1F1C472A00EC0131 /* FTT_Roundview.m in Sources */,
+				CC638AF01F1C472A00EC0131 /* ModalViewController.m in Sources */,
+				CC638AF11F1C472A00EC0131 /* SwipeUpInteractiveTransition.m in Sources */,
+				CC638AF21F1C472A00EC0131 /* AppDelegate.m in Sources */,
+				CC638AF31F1C472A00EC0131 /* main.m in Sources */,
+				CC638AF41F1C472A00EC0131 /* KTOneFingerRotationGestureRecognizer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9A85D11F17033F00590B47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +374,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CC638AFD1F1C472A00EC0131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 38L5433X9B;
+				INFOPLIST_FILE = "$(SRCROOT)/WXBasicAnimationInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tezhi.WXTransitionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC638AFE1F1C472A00EC0131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 38L5433X9B;
+				INFOPLIST_FILE = "$(SRCROOT)/WXBasicAnimationInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tezhi.WXTransitionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CC9A85EA1F17033F00590B47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC638AFC1F1C472A00EC0131 /* Build configuration list for PBXNativeTarget "WXBasicAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC638AFD1F1C472A00EC0131 /* Debug */,
+				CC638AFE1F1C472A00EC0131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC9A85D01F17033F00590B47 /* Build configuration list for PBXProject "WXTransitionDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

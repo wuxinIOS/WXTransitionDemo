@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WXBasicAnimation.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WXTransitionDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CC638AE61F1C472A00EC0131</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CC9A85D41F17033F00590B47</key>
 		<dict>
 			<key>primary</key>
