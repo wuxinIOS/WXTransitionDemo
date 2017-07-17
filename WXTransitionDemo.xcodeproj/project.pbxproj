@@ -25,6 +25,11 @@
 		CC638AFA1F1C472A00EC0131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A85E11F17033F00590B47 /* Main.storyboard */; };
 		CC638AFB1F1C472A00EC0131 /* zrx4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC9A86011F175D4400590B47 /* zrx4.jpg */; };
 		CC638B071F1C48BB00EC0131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B061F1C48BB00EC0131 /* ViewController.m */; };
+		CC638B0A1F1C4C5E00EC0131 /* WXLogInAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B091F1C4C5E00EC0131 /* WXLogInAnimationController.m */; };
+		CC638B0C1F1C559E00EC0131 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC638B0B1F1C559E00EC0131 /* 1.png */; };
+		CC638B0E1F1C55A200EC0131 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC638B0D1F1C55A200EC0131 /* 2.png */; };
+		CC638B111F1C55C100EC0131 /* WXTransitonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */; };
+		CC638B141F1C5B2F00EC0131 /* WXSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */; };
 		CC9A85DA1F17033F00590B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85D91F17033F00590B47 /* main.m */; };
 		CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DC1F17033F00590B47 /* AppDelegate.m */; };
 		CC9A85E01F17033F00590B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DF1F17033F00590B47 /* ViewController.m */; };
@@ -50,6 +55,14 @@
 		CC638B001F1C472A00EC0131 /* WXBasicAnimationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = WXBasicAnimationInfo.plist; path = "/Users/blackergray/Desktop/WXCode/GitHub项目/WXTransitionDemo/WXBasicAnimationInfo.plist"; sourceTree = "<absolute>"; };
 		CC638B051F1C48BB00EC0131 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CC638B061F1C48BB00EC0131 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC638B081F1C4C5E00EC0131 /* WXLogInAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogInAnimationController.h; sourceTree = "<group>"; };
+		CC638B091F1C4C5E00EC0131 /* WXLogInAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXLogInAnimationController.m; sourceTree = "<group>"; };
+		CC638B0B1F1C559E00EC0131 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CC638B0D1F1C55A200EC0131 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CC638B0F1F1C55C100EC0131 /* WXTransitonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXTransitonAnimation.h; sourceTree = "<group>"; };
+		CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXTransitonAnimation.m; sourceTree = "<group>"; };
+		CC638B121F1C5B2F00EC0131 /* WXSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpringAnimation.h; sourceTree = "<group>"; };
+		CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSpringAnimation.m; sourceTree = "<group>"; };
 		CC9A85D51F17033F00590B47 /* WXTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A85D91F17033F00590B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9A85DB1F17033F00590B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,9 +118,17 @@
 		CC638B011F1C47CC00EC0131 /* WXBasicAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CC638B0B1F1C559E00EC0131 /* 1.png */,
+				CC638B0D1F1C55A200EC0131 /* 2.png */,
 				CC638B001F1C472A00EC0131 /* WXBasicAnimationInfo.plist */,
 				CC638B051F1C48BB00EC0131 /* ViewController.h */,
 				CC638B061F1C48BB00EC0131 /* ViewController.m */,
+				CC638B081F1C4C5E00EC0131 /* WXLogInAnimationController.h */,
+				CC638B091F1C4C5E00EC0131 /* WXLogInAnimationController.m */,
+				CC638B0F1F1C55C100EC0131 /* WXTransitonAnimation.h */,
+				CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */,
+				CC638B121F1C5B2F00EC0131 /* WXSpringAnimation.h */,
+				CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */,
 			);
 			path = WXBasicAnimation;
 			sourceTree = "<group>";
@@ -291,7 +312,9 @@
 			files = (
 				CC638AF71F1C472A00EC0131 /* LaunchScreen.storyboard in Resources */,
 				CC638AF81F1C472A00EC0131 /* 5355d3ccc22dd.jpg in Resources */,
+				CC638B0E1F1C55A200EC0131 /* 2.png in Resources */,
 				CC638AF91F1C472A00EC0131 /* Assets.xcassets in Resources */,
+				CC638B0C1F1C559E00EC0131 /* 1.png in Resources */,
 				CC638AFA1F1C472A00EC0131 /* Main.storyboard in Resources */,
 				CC638AFB1F1C472A00EC0131 /* zrx4.jpg in Resources */,
 			);
@@ -316,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC638B141F1C5B2F00EC0131 /* WXSpringAnimation.m in Sources */,
 				CC638AE81F1C472A00EC0131 /* NormalDismissAnimation.m in Sources */,
 				CC638AE91F1C472A00EC0131 /* WXMagicMoveController.m in Sources */,
 				CC638AEA1F1C472A00EC0131 /* WXMagicMovePushController.m in Sources */,
@@ -323,11 +347,13 @@
 				CC638AEC1F1C472A00EC0131 /* WXPercentInteractiveTransition.m in Sources */,
 				CC638AED1F1C472A00EC0131 /* BouncePresentAnimation.m in Sources */,
 				CC638B071F1C48BB00EC0131 /* ViewController.m in Sources */,
+				CC638B0A1F1C4C5E00EC0131 /* WXLogInAnimationController.m in Sources */,
 				CC638AEE1F1C472A00EC0131 /* FTT_Roundview.m in Sources */,
 				CC638AF01F1C472A00EC0131 /* ModalViewController.m in Sources */,
 				CC638AF11F1C472A00EC0131 /* SwipeUpInteractiveTransition.m in Sources */,
 				CC638AF21F1C472A00EC0131 /* AppDelegate.m in Sources */,
 				CC638AF31F1C472A00EC0131 /* main.m in Sources */,
+				CC638B111F1C55C100EC0131 /* WXTransitonAnimation.m in Sources */,
 				CC638AF41F1C472A00EC0131 /* KTOneFingerRotationGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

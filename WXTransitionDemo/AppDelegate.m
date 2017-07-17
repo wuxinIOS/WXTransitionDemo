@@ -19,7 +19,9 @@
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     ViewController *mainViewController = [ViewController new];
-    self.window.rootViewController = mainViewController;
+    mainViewController.title = @"动画";
+    UINavigationController *navc = [[UINavigationController alloc]initWithRootViewController:mainViewController];
+    self.window.rootViewController = navc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

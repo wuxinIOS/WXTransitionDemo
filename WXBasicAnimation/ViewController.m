@@ -7,20 +7,80 @@
 //
 
 #import "ViewController.h"
+#import "WXLogInAnimationController.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, strong)NSArray *vcName;
 @end
 
 @implementation ViewController
 
+- (NSArray *)vcName {
+    if (!_vcName) {
+        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation"];
+    }
+    return  _vcName;
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation"].mutableCopy;
+        
+    }
+    return _dataArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupTableView];
 
-
-    self.view.backgroundColor = [UIColor redColor];
+    
 
 }
+
+- (void)setupTableView{
+    
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview: self.tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    
+    
+}
+
+#pragma mark -- UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)
+    indexPath {
+    UIViewController *vc = (UIViewController *)[NSClassFromString(self.vcName[indexPath.row]) new];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+#pragma mark -- UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArray.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.dataArray[indexPath.row];
+
+    return cell;
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
