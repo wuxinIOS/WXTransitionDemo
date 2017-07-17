@@ -19,14 +19,14 @@
 
 - (NSArray *)vcName {
     if (!_vcName) {
-        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation",@"WX_CAKeyFrameAnimation"];
+        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation",@"WX_CAKeyFrameAnimation",@"WX_CATransiton"];
     }
     return  _vcName;
 }
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画",@"WX_CAKeyFrameAnimation帧动画"].mutableCopy;
+        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画",@"WX_CAKeyFrameAnimation帧动画",@"WX_CATransiton转场动画"].mutableCopy;
         
     }
     return _dataArray;
@@ -57,6 +57,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)
     indexPath {
     UIViewController *vc = (UIViewController *)[NSClassFromString(self.vcName[indexPath.row]) new];
+    vc.title = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
     
 }
