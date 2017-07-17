@@ -19,14 +19,14 @@
 
 - (NSArray *)vcName {
     if (!_vcName) {
-        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation"];
+        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation"];
     }
     return  _vcName;
 }
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation"].mutableCopy;
+        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画"].mutableCopy;
         
     }
     return _dataArray;

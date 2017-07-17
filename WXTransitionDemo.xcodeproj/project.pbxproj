@@ -30,6 +30,7 @@
 		CC638B0E1F1C55A200EC0131 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC638B0D1F1C55A200EC0131 /* 2.png */; };
 		CC638B111F1C55C100EC0131 /* WXTransitonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */; };
 		CC638B141F1C5B2F00EC0131 /* WXSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */; };
+		CC638B171F1C8F2600EC0131 /* WX_CABasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */; };
 		CC9A85DA1F17033F00590B47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85D91F17033F00590B47 /* main.m */; };
 		CC9A85DD1F17033F00590B47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DC1F17033F00590B47 /* AppDelegate.m */; };
 		CC9A85E01F17033F00590B47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85DF1F17033F00590B47 /* ViewController.m */; };
@@ -63,6 +64,8 @@
 		CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXTransitonAnimation.m; sourceTree = "<group>"; };
 		CC638B121F1C5B2F00EC0131 /* WXSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpringAnimation.h; sourceTree = "<group>"; };
 		CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSpringAnimation.m; sourceTree = "<group>"; };
+		CC638B151F1C8F2600EC0131 /* WX_CABasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WX_CABasicAnimation.h; sourceTree = "<group>"; };
+		CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WX_CABasicAnimation.m; sourceTree = "<group>"; };
 		CC9A85D51F17033F00590B47 /* WXTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A85D91F17033F00590B47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9A85DB1F17033F00590B47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				CC638B101F1C55C100EC0131 /* WXTransitonAnimation.m */,
 				CC638B121F1C5B2F00EC0131 /* WXSpringAnimation.h */,
 				CC638B131F1C5B2F00EC0131 /* WXSpringAnimation.m */,
+				CC638B151F1C8F2600EC0131 /* WX_CABasicAnimation.h */,
+				CC638B161F1C8F2600EC0131 /* WX_CABasicAnimation.m */,
 			);
 			path = WXBasicAnimation;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				CC638AF21F1C472A00EC0131 /* AppDelegate.m in Sources */,
 				CC638AF31F1C472A00EC0131 /* main.m in Sources */,
 				CC638B111F1C55C100EC0131 /* WXTransitonAnimation.m in Sources */,
+				CC638B171F1C8F2600EC0131 /* WX_CABasicAnimation.m in Sources */,
 				CC638AF41F1C472A00EC0131 /* KTOneFingerRotationGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
