@@ -12,16 +12,20 @@
 
 @interface WXMagicMovePushController ()
 @property(nonatomic, strong)WXPercentInteractiveTransition *interactiveTransition;
+
 @end
 
 @implementation WXMagicMovePushController
 
 - (WXPercentInteractiveTransition *)interactiveTransition{
     if (!_interactiveTransition) {
-        _interactiveTransition = [[WXPercentInteractiveTransition alloc]initForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionRight withTransitionType:WXPercentInteractiveTransitionTypePop];
+        _interactiveTransition = [[WXPercentInteractiveTransition alloc]initForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionRight withTransitionType:WXPercentInteractiveTransitionTypePush];
     }
     return _interactiveTransition;
 }
+
+
+
 
 - (void)dealloc {
     NSLog(@"释放了");
@@ -48,7 +52,6 @@
 //动画效果
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
     
-    
         return [WXMagicTransiton magicTransitionWithType:operation == UINavigationControllerOperationPush?WXNaviOneTransitionTypePush:WXNaviOneTransitionTypePop];
     
     
@@ -56,7 +59,10 @@
 
 //手势动画效果
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-    return self.interactiveTransition.transitioning ? self.interactiveTransition:nil;
+    
+    
+        return self.interactiveTransition.transitioning ? self.interactiveTransition:nil;
+    
 }
 
 

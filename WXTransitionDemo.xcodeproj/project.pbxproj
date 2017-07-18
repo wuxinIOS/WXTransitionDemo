@@ -55,6 +55,7 @@
 		CCDCEEBC1F18AADA005E255E /* WXPercentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */; };
 		CCEDB9631F1DA91F00BD6F99 /* WXPageNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */; };
 		CCEDB9661F1DE52700BD6F99 /* WXGradientLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEDB9651F1DE52700BD6F99 /* WXGradientLayerController.m */; };
+		CCEDB9691F1DEE8A00BD6F99 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEDB9681F1DEE8A00BD6F99 /* UIView+anchorPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,8 @@
 		CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPageNextController.m; sourceTree = "<group>"; };
 		CCEDB9641F1DE52700BD6F99 /* WXGradientLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXGradientLayerController.h; sourceTree = "<group>"; };
 		CCEDB9651F1DE52700BD6F99 /* WXGradientLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXGradientLayerController.m; sourceTree = "<group>"; };
+		CCEDB9671F1DEE8A00BD6F99 /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
+		CCEDB9681F1DEE8A00BD6F99 /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */,
 				CC355C491F1DA1EA00EA9411 /* WXPageAnimation.h */,
 				CC355C4A1F1DA1EA00EA9411 /* WXPageAnimation.m */,
+				CCEDB9671F1DEE8A00BD6F99 /* UIView+anchorPoint.h */,
+				CCEDB9681F1DEE8A00BD6F99 /* UIView+anchorPoint.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 			files = (
 				CCEDB9631F1DA91F00BD6F99 /* WXPageNextController.m in Sources */,
 				CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */,
+				CCEDB9691F1DEE8A00BD6F99 /* UIView+anchorPoint.m in Sources */,
 				CCDCEEB01F18692C005E255E /* WXMagicMoveController.m in Sources */,
 				CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */,
 				CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */,

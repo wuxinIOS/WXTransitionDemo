@@ -8,28 +8,50 @@
 
 #import "WXPageNextController.h"
 #import "WXPageAnimation.h"
+#import "WXPercentInteractiveTransition.h"
 
 @interface WXPageNextController ()
+@property(nonatomic, strong)WXPercentInteractiveTransition *interactiveTransitionPop;
+@property(nonatomic, assign)UINavigationControllerOperation type;
 
 @end
 
 @implementation WXPageNextController
 
+
+
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     
-   
+   _interactiveTransitionPop = [[WXPercentInteractiveTransition alloc]initForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionRight withTransitionType:WXPercentInteractiveTransitionTypePop];
 
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    
+    _type = operation;
     return [[WXPageAnimation alloc]initWithOperationType:operation];
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
-    return nil;
+    
+    
+    if (_type == UINavigationControllerOperationPush) {
+        
+        WXPercentInteractiveTransition *transition = [self.nextDelegate interactiveTransitionForPush];
+        
+        return transition.transitioning?transition:nil;
+        
+    } else  {
+        
+        return self.interactiveTransitionPop.transitioning ? self.interactiveTransitionPop:nil;
+
+    }
+   
 }
 
 

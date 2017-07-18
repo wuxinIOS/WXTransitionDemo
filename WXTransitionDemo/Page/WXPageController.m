@@ -8,19 +8,31 @@
 
 #import "WXPageController.h"
 #import "WXPageNextController.h"
+#import "WXPercentInteractiveTransition.h"
 
 
-@interface WXPageController ()
+@interface WXPageController ()<WXPageNextControllerDelegate>
+@property(nonatomic, strong)WXPercentInteractiveTransition *interactiveTransitionPush;
 
 @end
 
 @implementation WXPageController
 
+- (id<UIViewControllerInteractiveTransitioning>)interactiveTransitionForPush{
+    return self.interactiveTransitionPush;
+}
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.navigationController.delegate = self;
 
+    _interactiveTransitionPush = [[WXPercentInteractiveTransition alloc]initForViewController:self withGestureDirection:WXPercentInteractiveTransitionGestureDirectionLeft withTransitionType:WXPercentInteractiveTransitionTypePush];
+    
+    
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     CGRect frame = CGRectMake( 50, 100, 100, 50);
     btn.frame = frame;
@@ -31,12 +43,12 @@
     btn.titleLabel.textAlignment = NSTextAlignmentCenter;
     btn.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:btn];
+    typeof(self)weakSelf = self;
 
-   
-    
-
-    
-
+    self.interactiveTransitionPush.pushConifg = ^(){
+        [weakSelf changedAnimation];
+        
+    };
 
 }
 
@@ -45,7 +57,7 @@
     
     WXPageNextController *next = [[WXPageNextController alloc]init];
     self.navigationController.delegate = next;
-    
+    next.nextDelegate = self;
     [self.navigationController pushViewController:next animated:YES];
     
 }

@@ -81,6 +81,8 @@
             [self updateInteractiveTransition:percent];
             break;
         case UIGestureRecognizerStateEnded:
+        
+        {
             self.transitioning = NO;
             
             switch (self.direction) {
@@ -92,20 +94,25 @@
                         [self cancelInteractiveTransition];
                         
                     }
-
                     break;
-                    
-                default:
+                case WXPercentInteractiveTransitionGestureDirectionUp:
+                case WXPercentInteractiveTransitionGestureDirectionDown:
                     if (percent > 0.45) {
                         [self finishInteractiveTransition];
                     } else {
                         [self cancelInteractiveTransition];
-
+                        
                     }
                     break;
+                default:
+                    
+                    break;
             }
-            
             break;
+        }
+        case UIGestureRecognizerStateCancelled:
+            [self cancelInteractiveTransition];
+        break;
         default:
             break;
     }
@@ -114,8 +121,18 @@
 - (void)startTransition{
     
     switch (self.type) {
+        case WXPercentInteractiveTransitionTypePush:
+            if (self.pushConifg) {
+                self.pushConifg();
+            }
+            break;
         case WXPercentInteractiveTransitionTypePop:
             [self.viewController.navigationController popViewControllerAnimated:YES];
+            break;
+        case WXPercentInteractiveTransitionTypePresent:
+            if (self.presentConifg) {
+                self.presentConifg();
+            }
             break;
         case WXPercentInteractiveTransitionTypeDismiss:
             [self.viewController dismissViewControllerAnimated:YES completion:nil];
