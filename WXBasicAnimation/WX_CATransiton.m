@@ -34,6 +34,7 @@
     transitionView.backgroundColor = [UIColor redColor];
     transitionView.text = self.animationTypeArray[self.index];
     transitionView.numberOfLines = 0;
+    transitionView.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:transitionView];
     self.transitionView = transitionView;
     
@@ -42,32 +43,63 @@
     
     [btn setTitle:@"切换动画" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+//    [self.view addSubview:btn];
     
     CATransition *transition = [CATransition new];
     transition.duration = 1;
-    transition.type = self.animationTypeArray[_index];
+    
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     transition.repeatCount = 1;
     transition.subtype = kCATransitionFromLeft;
-    transition.autoreverses = YES;
+//    transition.autoreverses = YES;
     
     self.transition = transition;
     
+    [self setupBtn];
    
-
 }
 
-- (void)btnAction:(UIButton *)sender {
-    if (self.index == self.animationTypeArray.count - 1) {
-        self.index = 0;
-    } else {
-        self.index++;
+- (void)setupBtn{
+    
+    CGFloat x = 10;
+    CGFloat y = 300;
+    int count = self.animationTypeArray.count;
+    int col = 3;
+    int row = 0;
+    int cow = 0;
+    CGFloat widht = (self.view.bounds.size.width - 4 * x) / col;
+    CGFloat height = 30;
+    for (int i = 0; i < count; i++) {
+        row = i / col;
+        cow = i % col;
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        CGRect frame = CGRectMake( cow * (x + widht) + x, row * (x + height) + y, widht, height);
+        btn.frame = frame;
+        [btn setTitle:self.animationTypeArray[i] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(changedAnimation:) forControlEvents:UIControlEventTouchUpInside];
+        btn.titleLabel.numberOfLines = 0;
+        btn.titleLabel.font = [UIFont systemFontOfSize:12];
+        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        btn.backgroundColor = [UIColor lightGrayColor];
+        [self.view addSubview:btn];
+        btn.tag = i;
     }
-    self.transition.type = self.animationTypeArray[_index];
-    self.transitionView.text = self.animationTypeArray[_index];
-    [self.transitionView.layer addAnimation:self.transition forKey:@"transition"];
+    
+    
+    
 }
+
+
+- (void)changedAnimation:(UIButton *)sender {
+    int index = sender.tag;
+    self.transition.type = self.animationTypeArray[index];
+    self.transitionView.text = self.animationTypeArray[index];
+    [self.transitionView.layer addAnimation:self.transition forKey:@"transition"];
+    
+    
+}
+
+
 
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC355C481F1DA0FC00EA9411 /* WXPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC355C471F1DA0FC00EA9411 /* WXPageController.m */; };
+		CC355C4B1F1DA1EA00EA9411 /* WXPageAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC355C4A1F1DA1EA00EA9411 /* WXPageAnimation.m */; };
 		CC638AE81F1C472A00EC0131 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9A86091F175E9200590B47 /* NormalDismissAnimation.m */; };
 		CC638AE91F1C472A00EC0131 /* WXMagicMoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEAF1F18692C005E255E /* WXMagicMoveController.m */; };
 		CC638AEA1F1C472A00EC0131 /* WXMagicMovePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB21F186F8C005E255E /* WXMagicMovePushController.m */; };
@@ -51,9 +53,15 @@
 		CCDCEEB61F1870B1005E255E /* WXMagicTransiton.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEB51F1870B1005E255E /* WXMagicTransiton.m */; };
 		CCDCEEB81F18A74E005E255E /* 5355d3ccc22dd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */; };
 		CCDCEEBC1F18AADA005E255E /* WXPercentInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */; };
+		CCEDB9631F1DA91F00BD6F99 /* WXPageNextController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */; };
+		CCEDB9661F1DE52700BD6F99 /* WXGradientLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEDB9651F1DE52700BD6F99 /* WXGradientLayerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC355C461F1DA0FC00EA9411 /* WXPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPageController.h; sourceTree = "<group>"; };
+		CC355C471F1DA0FC00EA9411 /* WXPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPageController.m; sourceTree = "<group>"; };
+		CC355C491F1DA1EA00EA9411 /* WXPageAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPageAnimation.h; sourceTree = "<group>"; };
+		CC355C4A1F1DA1EA00EA9411 /* WXPageAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPageAnimation.m; sourceTree = "<group>"; };
 		CC638AFF1F1C472A00EC0131 /* WXBasicAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXBasicAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC638B001F1C472A00EC0131 /* WXBasicAnimationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = WXBasicAnimationInfo.plist; path = "/Users/blackergray/Desktop/WXCode/GitHub项目/WXTransitionDemo/WXBasicAnimationInfo.plist"; sourceTree = "<absolute>"; };
 		CC638B051F1C48BB00EC0131 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -104,6 +112,10 @@
 		CCDCEEB71F18A74E005E255E /* 5355d3ccc22dd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5355d3ccc22dd.jpg; sourceTree = "<group>"; };
 		CCDCEEBA1F18AADA005E255E /* WXPercentInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPercentInteractiveTransition.h; sourceTree = "<group>"; };
 		CCDCEEBB1F18AADA005E255E /* WXPercentInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPercentInteractiveTransition.m; sourceTree = "<group>"; };
+		CCEDB9611F1DA91F00BD6F99 /* WXPageNextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPageNextController.h; sourceTree = "<group>"; };
+		CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPageNextController.m; sourceTree = "<group>"; };
+		CCEDB9641F1DE52700BD6F99 /* WXGradientLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXGradientLayerController.h; sourceTree = "<group>"; };
+		CCEDB9651F1DE52700BD6F99 /* WXGradientLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXGradientLayerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC355C451F1DA09100EA9411 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				CC355C461F1DA0FC00EA9411 /* WXPageController.h */,
+				CC355C471F1DA0FC00EA9411 /* WXPageController.m */,
+				CCEDB9611F1DA91F00BD6F99 /* WXPageNextController.h */,
+				CCEDB9621F1DA91F00BD6F99 /* WXPageNextController.m */,
+				CC355C491F1DA1EA00EA9411 /* WXPageAnimation.h */,
+				CC355C4A1F1DA1EA00EA9411 /* WXPageAnimation.m */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
 		CC638B011F1C47CC00EC0131 /* WXBasicAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +169,8 @@
 				CC638B191F1CA30C00EC0131 /* WX_CAKeyFrameAnimation.m */,
 				CC638B1B1F1CAB4B00EC0131 /* WX_CATransiton.h */,
 				CC638B1C1F1CAB4B00EC0131 /* WX_CATransiton.m */,
+				CCEDB9641F1DE52700BD6F99 /* WXGradientLayerController.h */,
+				CCEDB9651F1DE52700BD6F99 /* WXGradientLayerController.m */,
 			);
 			path = WXBasicAnimation;
 			sourceTree = "<group>";
@@ -172,6 +199,7 @@
 				CCDCEEB91F18AA87005E255E /* WXInteractiveTransition(手势过渡动画) */,
 				CCDCEEAD1F1868EE005E255E /* MagicMove */,
 				CC9A86031F175E9200590B47 /* BounceEffect */,
+				CC355C451F1DA09100EA9411 /* Page */,
 				CC9A85DB1F17033F00590B47 /* AppDelegate.h */,
 				CC9A85DC1F17033F00590B47 /* AppDelegate.m */,
 				CC9A85DE1F17033F00590B47 /* ViewController.h */,
@@ -358,6 +386,7 @@
 				CC638AE81F1C472A00EC0131 /* NormalDismissAnimation.m in Sources */,
 				CC638AE91F1C472A00EC0131 /* WXMagicMoveController.m in Sources */,
 				CC638AEA1F1C472A00EC0131 /* WXMagicMovePushController.m in Sources */,
+				CCEDB9661F1DE52700BD6F99 /* WXGradientLayerController.m in Sources */,
 				CC638AEB1F1C472A00EC0131 /* WXMagicTransiton.m in Sources */,
 				CC638AEC1F1C472A00EC0131 /* WXPercentInteractiveTransition.m in Sources */,
 				CC638AED1F1C472A00EC0131 /* BouncePresentAnimation.m in Sources */,
@@ -380,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEDB9631F1DA91F00BD6F99 /* WXPageNextController.m in Sources */,
 				CC9A860E1F175E9200590B47 /* NormalDismissAnimation.m in Sources */,
 				CCDCEEB01F18692C005E255E /* WXMagicMoveController.m in Sources */,
 				CCDCEEB31F186F8C005E255E /* WXMagicMovePushController.m in Sources */,
@@ -387,6 +417,8 @@
 				CCDCEEBC1F18AADA005E255E /* WXPercentInteractiveTransition.m in Sources */,
 				CC9A860C1F175E9200590B47 /* BouncePresentAnimation.m in Sources */,
 				CCDCEEAA1F1849AB005E255E /* FTT_Roundview.m in Sources */,
+				CC355C481F1DA0FC00EA9411 /* WXPageController.m in Sources */,
+				CC355C4B1F1DA1EA00EA9411 /* WXPageAnimation.m in Sources */,
 				CC9A85E01F17033F00590B47 /* ViewController.m in Sources */,
 				CC9A860D1F175E9200590B47 /* ModalViewController.m in Sources */,
 				CC9A860F1F175E9200590B47 /* SwipeUpInteractiveTransition.m in Sources */,

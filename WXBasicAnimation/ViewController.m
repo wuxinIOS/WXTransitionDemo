@@ -19,14 +19,14 @@
 
 - (NSArray *)vcName {
     if (!_vcName) {
-        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation",@"WX_CAKeyFrameAnimation",@"WX_CATransiton"];
+        _vcName = @[@"WXLogInAnimationController",@"WXTransitonAnimation",@"WXSpringAnimation",@"WX_CABasicAnimation",@"WX_CAKeyFrameAnimation",@"WX_CATransiton",@"WXGradientLayerController"];
     }
     return  _vcName;
 }
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画",@"WX_CAKeyFrameAnimation帧动画",@"WX_CATransiton转场动画"].mutableCopy;
+        _dataArray = @[@"logoAnimation",@"TransitionAnimation",@"springAnimation",@"WX_CABasicAnimation基础动画",@"WX_CAKeyFrameAnimation帧动画",@"WX_CATransiton转场动画",@"WXGradientLayerController渐变颜色"].mutableCopy;
         
     }
     return _dataArray;

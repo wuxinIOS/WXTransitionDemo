@@ -75,12 +75,17 @@
     contentAnimation.repeatCount = MAXFLOAT;
     contentAnimation.autoreverses = YES;
     [imgView.layer addAnimation:contentAnimation forKey:@"contentAnimation"];
-    
-    
-    
-
 
 }
+
+- (UIButton *)buttonWithFrame:(CGRect)frame withTitle:(NSString *)title {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = frame;
+    [btn setTitle:title forState:UIControlStateNormal];
+    return btn;
+}
+
+
 
 - (void)btnAction:(UIButton *)sender {
     

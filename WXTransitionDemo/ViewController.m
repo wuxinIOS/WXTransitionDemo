@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ModalViewController.h"
 #import "WXMagicMoveController.h"
+#import "WXPageController.h"
 
 #import "FTT_Roundview.h"
 
@@ -84,7 +85,7 @@
 
 - (NSMutableArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = [@[@"神奇移动",@"抖动",@"扩散",@"翻页",@"弹性(bounce)"] mutableCopy];
+        _titleArray = [@[@"神奇移动",@"抖动",@"扩散",@"翻页(page)",@"弹性(bounce)"] mutableCopy];
     }
     return _titleArray;
 }
@@ -228,6 +229,11 @@
         magicMoveVC.title = @"神奇移动";
         [self presentViewController:navc animated:YES completion:nil];
         
+    } else if ([title isEqualToString:@"翻页(page)"]) {
+        WXPageController *pageController = [[WXPageController alloc]init];
+        pageController.navigationController.delegate = pageController;
+        pageController.title = @"翻页效果";
+        [self.navigationController pushViewController:pageController animated:YES];
     }
     
 }
